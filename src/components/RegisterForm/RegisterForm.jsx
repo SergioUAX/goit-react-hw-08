@@ -1,7 +1,11 @@
 import { Field, Form, Formik } from 'formik';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { registerThunk } from '../../redux/auth/operations';
 
 const RegisterForm = () => { 
+
+  const dispatch = useDispatch();
   
   const initialValues = {
     name: '',
@@ -11,6 +15,7 @@ const RegisterForm = () => {
 
   const handleSubmit = (values, options) => { 
     console.log(values);
+    dispatch(registerThunk(values));
   }
   return (
     <div className="hero bg-base-200 min-h-screen">
