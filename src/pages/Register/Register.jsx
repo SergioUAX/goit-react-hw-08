@@ -1,4 +1,4 @@
-import styles from './register.module.css';
+import styles from './Register.module.css';
 import RegisterForm from '../../components/RegisterForm/RegisterForm';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { useSelector } from 'react-redux';

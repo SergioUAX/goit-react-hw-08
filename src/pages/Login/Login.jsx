@@ -1,7 +1,7 @@
 import LoginForm from '../../components/LoginForm/LoginForm';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { useSelector } from 'react-redux';
-import styles from './login.module.css';
+import styles from './Login.module.css';
 import { Navigate } from 'react-router-dom';
 
 const Login = () => {
