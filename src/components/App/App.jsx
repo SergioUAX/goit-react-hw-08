@@ -6,9 +6,21 @@ import Register from '../../pages/Register/Register';
 import Contacts from '../../pages/Contacts/Contacts';
 import NotFound from '../../pages/NotFound/NotFound';
 import SharedLayout from '../SharedLayout/SharedLayout';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { refreshThunk } from '../../redux/auth/operations';
+import { selectIsRefreshing } from '../../redux/auth/selectors';
 
-function App() {   
-  return (
+function App() {
+  const dispatch = useDispatch();
+  const isRefreshing = useSelector(selectIsRefreshing);
+  useEffect(() => { 
+    dispatch(refreshThunk());
+  },[dispatch]);
+
+  return isRefreshing ?
+    null    
+    : (
     <>      
         <Routes>
           <Route path= '/' element= {<SharedLayout />}>
