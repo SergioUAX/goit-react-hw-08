@@ -5,7 +5,7 @@ import Login from '../../pages/LoginPage/LoginPage';
 import Register from '../../pages/RegistationPage/RegistrationPage';
 import Contacts from '../../pages/ContactsPage/ContactsPage';
 import NotFound from '../../pages/NotFoundPage/NotFoundPage';
-import SharedLayout from '../SharedLayout/SharedLayout';
+import Layout from '../Layout/Layout';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { refreshThunk } from '../../redux/auth/operations';
@@ -25,7 +25,7 @@ function App() {
     : (
     <>      
         <Routes>
-          <Route path= '/' element= {<SharedLayout />}>
+          <Route path= '/' element= {<Layout />}>
             <Route index element={<Home />} />          
             <Route path='/contacts' element={
               <PrivateRoute>

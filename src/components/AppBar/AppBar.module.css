@@ -1,0 +1,17 @@
+/* .navigation {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #221f1f 95%, #828181 100%);
+}
+
+.link {
+    font-size: 20px;    
+    color: var(--color-white);
+    transition: color var(--transition-duration);
+}
+
+.link:hover,
+.active {
+    color: var(--color-primary);
+} */
