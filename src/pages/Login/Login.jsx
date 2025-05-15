@@ -1,14 +1,15 @@
 import LoginForm from '../../components/LoginForm/LoginForm';
-import { selectIsLoggedIn } from '../../redux/auth/selectors';
-import { useSelector } from 'react-redux';
+// import { selectIsLoggedIn } from '../../redux/auth/selectors';
+// import { useSelector } from 'react-redux';
+// import { Navigate } from 'react-router-dom';
 import styles from './Login.module.css';
-import { Navigate } from 'react-router-dom';
+
 
 const Login = () => {
-    const isLoggedIn = useSelector(selectIsLoggedIn);
-    if (isLoggedIn) {
-        return <Navigate to='/' />;
-    }
+    // const isLoggedIn = useSelector(selectIsLoggedIn);
+    // if (isLoggedIn) {
+    //     return <Navigate to='/' />;
+    // }
     return (
         <div>
             <h2>Login page</h2>

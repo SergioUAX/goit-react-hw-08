@@ -1,5 +1,6 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import { addContact, deleteContact, fetchContacts } from './contactsOps';
+import { logoutThunk } from './auth/operations';
 
 export const selectContacts = state => state.contacts.items;
 export const selectError = state => state.contacts.error;
@@ -26,6 +27,8 @@ const contactsSlice = createSlice({
       .addCase(addContact.fulfilled, (state, action) => { 
         state.items.push(action.payload);
       })      
+      .addCase(logoutThunk.fulfilled, () => initialState)
+      
       .addMatcher(isAnyOf(fetchContacts.rejected, deleteContact.rejected, addContact.rejected),
         (state, action) => {
           state.error = action.payload;
@@ -39,6 +42,7 @@ const contactsSlice = createSlice({
         (state, action) => {          
           state.isLoading = false;
         })
+      
   }
 });
 
