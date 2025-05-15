@@ -1,10 +1,10 @@
 import styles from './App.module.css';
 import { Routes, Route } from 'react-router-dom';
-import Home from '../../pages/Home/Home';
-import Login from '../../pages/Login/Login';
-import Register from '../../pages/Register/Register';
-import Contacts from '../../pages/Contacts/Contacts';
-import NotFound from '../../pages/NotFound/NotFound';
+import Home from '../../pages/HomePage/HomePage';
+import Login from '../../pages/LoginPage/LoginPage';
+import Register from '../../pages/RegistationPage/RegistrationPage';
+import Contacts from '../../pages/ContactsPage/ContactsPage';
+import NotFound from '../../pages/NotFoundPage/NotFoundPage';
 import SharedLayout from '../SharedLayout/SharedLayout';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';

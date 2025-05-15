@@ -17,6 +17,7 @@ const RegisterForm = () => {
     console.log(values);
     dispatch(registerThunk(values));
   }
+
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -47,5 +48,7 @@ const RegisterForm = () => {
         </div>
       </div>
     </div>    
-)};
+  )
+};
+
 export default RegisterForm;

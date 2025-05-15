@@ -1,4 +1,4 @@
-import styles from './NotFound.module.css';
+import styles from './NotFoundPage.module.css';
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import default_img from '../../images/default_img.jpg';

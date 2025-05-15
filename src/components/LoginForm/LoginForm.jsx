@@ -14,6 +14,7 @@ const LoginForm = () => {
   const handleSubmit = (values, options) => {     
     dispatch(loginThunk(values));
   }
+
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -42,5 +43,7 @@ const LoginForm = () => {
         </div>
       </div>
     </div>    
-)};
+  )
+};
+
 export default LoginForm;

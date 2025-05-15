@@ -36,12 +36,8 @@ const Navigation = () => {
           </>
         }
         {isLoggedIn &&
-          <>
-          <button onClick={()=>dispatch(logoutThunk())}>Logout</button>
-          {/* <NavLink to="/login" className={buildLinkClass}>
-            Logout
-          </NavLink> */}
-          </>}
+          <button onClick={() => dispatch(logoutThunk())}>Logout</button>
+        }
       </nav>
       </header>
     );

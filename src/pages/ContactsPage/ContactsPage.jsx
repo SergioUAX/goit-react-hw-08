@@ -1,7 +1,7 @@
-import styles from './Contacts.module.css';
+import styles from './ContactsPage.module.css';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from '../../redux/contactsOps';
+import { fetchContacts } from '../../redux/contacts/operations';
 
 import ContactForm from '../../components/ContactForm/ContactForm';
 import ContactList from '../../components/ContactList/ContactList';

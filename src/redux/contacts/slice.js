@@ -1,10 +1,6 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import { addContact, deleteContact, fetchContacts } from './contactsOps';
-import { logoutThunk } from './auth/operations';
-
-export const selectContacts = state => state.contacts.items;
-export const selectError = state => state.contacts.error;
-export const selectLoading = state => state.contacts.isLoading;
+import { addContact, deleteContact, fetchContacts } from './operations';
+import { logoutThunk } from '../auth/operations';
 
 const initialState = {  
   items: [],
