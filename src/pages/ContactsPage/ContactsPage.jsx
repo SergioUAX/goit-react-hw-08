@@ -1,4 +1,3 @@
-import styles from './ContactsPage.module.css';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contacts/operations';
@@ -16,8 +15,7 @@ const Contacts = () => {
   }, [dispatch]);
 
     return (
-        <>
-            <h1>Phonebook</h1>
+        <>            
             <ContactForm/>
             <SearchBox/>        
             <ContactList />

@@ -1,4 +1,3 @@
-// import styles from './SearchBox.module.css';
 import { nanoid } from 'nanoid';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeFilter } from '../../redux/filters/slice';
@@ -15,15 +14,7 @@ const SearchBox = () => {
     };
     
     return (
-        // <div className={styles.searchBox}>
-        //     <label htmlFor={searchId}>Find contacs by name</label>
-        //     <input
-        //         type='text'                
-        //         id={searchId}
-        //         value={filterValue}
-        //         onChange={handleSearch} />
-        // </div>
-        <Box sx={{ mb: 4 }}>
+    <Box sx={{ mb: 4 }}>
       <TextField
         fullWidth
         id={searchId}
@@ -31,6 +22,7 @@ const SearchBox = () => {
         variant="outlined"
         value={filterValue}
         onChange={handleSearch}
+        sx={{ width: '400px', maxWidth: '100%' }}
       />
     </Box>
     );

@@ -1,10 +1,5 @@
 import { NavLink } from "react-router-dom";
-// import clsx from 'clsx';
 import { Button, Stack } from '@mui/material';
-
-// const buildLinkClass = ({ isActive }) => {
-//   return clsx(styles.link, isActive && styles.active);
-// };
 
 const linkStyles = {
   textTransform: 'none',
@@ -19,14 +14,6 @@ const linkStyles = {
 
 const AuthNav = () => {
   return (
-          // <>
-          // <NavLink to="/login" className={buildLinkClass}>
-          //   Login
-          // </NavLink>
-          // <NavLink to="/register" className={buildLinkClass}>
-          //   Register
-          // </NavLink>
-    // </>
     <Stack direction="row" spacing={2}>
       <Button
         component={NavLink}

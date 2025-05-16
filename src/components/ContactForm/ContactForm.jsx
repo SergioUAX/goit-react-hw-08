@@ -1,10 +1,9 @@
-// import styles from './ContactForm.module.css';
 import { nanoid } from 'nanoid';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form } from 'formik';
 import * as Yup from "yup";
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
-import { TextField, Button, Box, Typography } from '@mui/material';
+import { TextField, Button, Box, Typography, Paper } from '@mui/material';
 
 const initialValues = {
   name: '',
@@ -46,37 +45,20 @@ const ContactForm = () => {
         actions.resetForm();
     };
 
-    return (
-        // <Formik
-        //     initialValues={initialValues}
-        //     onSubmit={handleSubmit}
-        //     validationSchema={addContactSchema}>
-        //     <Form className={styles.formikForm}>
-        //         <div>
-        //             <label htmlFor={nameId}>Name</label>
-        //             <Field type="text" name="name" id={nameId} />
-        //             <ErrorMessage name="name" component="span" />
-        //         </div>
-        //         <div>
-        //             <label htmlFor={numberId}>Number</label>
-        //             <Field type="text" name="number" id={numberId} />
-        //             <ErrorMessage name="number" component="span" />
-        //         </div>
-        //         <button type="submit">Add contact</button>
-        //     </Form>
-        // </Formik>
-        <Box sx={{ mb: 4 }}>
-      <Typography variant="h5" sx={{ mb: 2 }}>Add New Contact</Typography>
-      <Formik
+    return (       
+      <Paper elevation={3} sx={{ p: 3, mt: 4, mb: 4, maxWidth: 400 }}>
+        <Typography variant="h6" sx={{ mb: 2 }}>
+          Add New Contact
+        </Typography>
+        <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
         validationSchema={addContactSchema}
-      >
+        >
         {({ errors, touched, handleChange, values }) => (
           <Form>
-            <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mb: 2 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               <TextField
-                fullWidth
                 id={nameId}
                 name="name"
                 label="Name"
@@ -84,10 +66,10 @@ const ContactForm = () => {
                 onChange={handleChange}
                 error={touched.name && Boolean(errors.name)}
                 helperText={touched.name && errors.name}
+                sx={{ width: '350px', maxWidth: '100%' }}
               />
 
               <TextField
-                fullWidth
                 id={numberId}
                 name="number"
                 label="Phone Number"
@@ -95,16 +77,17 @@ const ContactForm = () => {
                 onChange={handleChange}
                 error={touched.number && Boolean(errors.number)}
                 helperText={touched.number && errors.number}
+                sx={{ width: '350px', maxWidth: '100%' }}
               />
-            </Box>
 
-            <Button variant="contained" color="primary" type="submit">
-              Add contact
-            </Button>
+              <Button variant="contained" color="primary" type="submit">
+                Add contact
+              </Button>
+            </Box>
           </Form>
         )}
       </Formik>
-    </Box>
+    </Paper>
     );
 };
 

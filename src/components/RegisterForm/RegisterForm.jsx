@@ -21,13 +21,13 @@ const RegisterForm = () => {
   }
 
   const CustomTextField = ({ field, form, ...props }) => (
-  <TextField
-    {...field}
-    {...props}
-    fullWidth
-    margin="normal"
-    variant="outlined"
-  />
+    <TextField
+      {...field}
+      {...props}
+      fullWidth
+      margin="normal"
+      variant="outlined"
+    />
   );
 
   const CenteredBox = styled(Box)(() => ({
@@ -38,23 +38,7 @@ const RegisterForm = () => {
   }));
   
   return (
-        // <div className="registerForm">
-        //     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-        //       <Form>
-        //         <fieldset>
-        //           <label>Name</label>
-        //           <Field name = 'name' type="name" placeholder="Name" />
-        //           <label>Email</label>
-        //           <Field name = 'email' type="email" placeholder="Email" />
-        //           <label>Password</label>
-        //           <Field name = 'password' type="password" placeholder="Password" />
-        //           <Link to='/login' >Already have account? Login... </Link>
-        //           <button type='submit'>Register</button>
-        //         </fieldset>
-        //       </Form>
-        //     </Formik>             
-        //   </div>
-      <CenteredBox>
+    <CenteredBox>
       <Card sx={{ width: 400, padding: 2 }}>
         <CardContent>
           <Typography variant="h5" component="h1" gutterBottom align="center">

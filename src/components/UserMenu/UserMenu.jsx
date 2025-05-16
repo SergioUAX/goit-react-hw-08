@@ -1,4 +1,3 @@
-// import styles from './UserMenu.module.css';
 import { selectUser } from '../../redux/auth/selectors';
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutThunk } from '../../redux/auth/operations';
@@ -10,10 +9,6 @@ const UserMenu = () => {
   const user = useSelector(selectUser);
   
   return (
-    // <>
-    //   <h2>{user.name}</h2>        
-    //   <button onClick={() => dispatch(logoutThunk())}>Logout</button>
-    // </>
     <Stack direction="row" spacing={2} alignItems="center">
       <Typography variant="subtitle1" sx={{ fontWeight: 500 }}>
         Welcome, {user.name}

@@ -1,10 +1,5 @@
 import { NavLink } from "react-router-dom";
-// import clsx from 'clsx';
 import { Button, Stack } from '@mui/material';
-
-// const buildLinkClass = ({ isActive }) => {
-//   return clsx(styles.link, isActive && styles.active);
-// };
 
 const linkStyles = {
   textTransform: 'none',
@@ -19,16 +14,6 @@ const linkStyles = {
 
 const Navigation = () => {
   return (
-    // <div>       
-    //     <nav className={styles.navigation}>
-    //     <NavLink to="/" className={buildLinkClass}>
-    //       Home
-    //     </NavLink>
-    //     <NavLink to="/contacts" className={buildLinkClass}>
-    //       Contacts
-    //     </NavLink>        
-    //   </nav>
-    //   </div>
     <Stack direction="row" spacing={2}>
       <Button
         component={NavLink}

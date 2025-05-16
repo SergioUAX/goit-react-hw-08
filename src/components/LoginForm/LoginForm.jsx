@@ -36,22 +36,8 @@ const CenteredBox = styled(Box)(({ theme }) => ({
   height: '80vh',
 }));
 
-  return (    
-      // <div className="loginForm">                  
-      //       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-      //         <Form>
-      //           <fieldset>               
-      //             <label>Email</label>
-      //             <Field name = 'email' type="email" placeholder="Email" />
-      //             <label>Password</label>
-      //             <Field name = 'password' type="password" placeholder="Password" />
-      //             <Link to = '/register' >Don't have account? Register... </Link>                  
-      //             <button type='submit'>Log In</button>
-      //           </fieldset>
-      //         </Form>
-      //       </Formik>                       
-      // </div>       
-      <CenteredBox>
+  return (           
+    <CenteredBox>
       <Card sx={{ width: 400, padding: 2 }}>
         <CardContent>
           <Typography variant="h5" component="h1" gutterBottom align="center">
