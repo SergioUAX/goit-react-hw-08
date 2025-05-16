@@ -32,9 +32,10 @@ function App() {
                 <Contacts />
               </PrivateRoute>
             } />            
-          </Route>
-          <Route path='/login' element={<RestrictedRoute component={<Login />} redirectTo='/' />} />
+          <Route path='/login' element={<RestrictedRoute component={<Login />} redirectTo='/contacts' />} />
           <Route path='/register' element={<RestrictedRoute component={<Register />} redirectTo='/' />} />
+          </Route>
+          
           <Route path='*' element={<NotFound />} />
         </Routes>             
     </>
